@@ -7,6 +7,8 @@ authors = ["Gui Melo <guilherme.melo@solucaut.com.br>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 pygame = "^2.1.2"
+matplotlib = "^3.5.3"
+numpy = "^1.23.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
