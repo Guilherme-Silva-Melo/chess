@@ -10,21 +10,44 @@ load_bg = pygame.image.load("xadrez/tabuleiro.jpg")
 bg = pygame.transform.scale(load_bg,[640,640]) 
 gameLoop = True
 
+t1 = Pecas("torre","branca",[1,1])
+c1 = Pecas("cavalo","branca",[1,2])
+b1 = Pecas("bispo","branca",[1,3])
+k1 = Pecas("rei","branca",[1,4])
+q1 = Pecas("rainha","branca",[1,5])
+b2 = Pecas("bispo","branca",[1,6])
+c2 = Pecas("cavalo","branca",[1,7])
+t2 = Pecas("torre","branca",[1,8])
+
+t3 = Pecas("torre","preta",[1,1])
+c3 = Pecas("cavalo","preta",[1,2])
+b3 = Pecas("bispo","preta",[1,3])
+k2 = Pecas("rei","preta",[1,4])
+q2 = Pecas("rainha","preta",[1,5])
+b4 = Pecas("bispo","preta",[1,6])
+c4 = Pecas("cavalo","preta",[1,7])
+t4 = Pecas("torre","preta",[1,8])
+
+p = []
+for i in range(1,17):
+    if i < 9:
+        p.append(Pecas("peao","branca",[2,i]))
+    else:
+        p.append(Pecas("peao","preta",[7,i]))
+
+(p1,p2,p3,p4,p5,p6,p7,p8,
+p9,p10,p11,p12,p13,p14,p15,p16) = p.copy()
 
 
-tabuleiro = 
-    [
-        [torre("preta",1,[1,8]),cavalo("preta",1,[2,8]),bispo("preta",1,[3,8]),rei("preta",[4,8]),rainha("preta",[5,8]),bispo("preta",2,[6,8]), cavalo("preta",2,[7,8]),torre("preta",2,[8,8])],
-        [peao("preta",1,[1,7]),peao("preta",2,[2,7]),peao("preta",3,[3,7]),peao("preta",4,[4,7]),peao("preta",5,[5,7]),peao("preta",6,[6,7]),peao("preta",7,[7,7]),peao("preta",8,[8,7])],
-        [nula([1,6]),nula([2,6]),nula([3,6]),nula([4,6]),nula([5,6]),nula([6,6]),nula([7,6]),nula([8,6])],
-        [nula([1,5]),nula([2,5]),nula([3,5]),nula([4,5]),nula([5,5]),nula([6,5]),nula([7,5]),nula([8,5])],
-        [nula([1,4]),nula([2,4]),nula([3,4]),nula([4,4]),nula([5,4]),nula([6,4]),nula([7,4]),nula([8,4])],
-        [nula([1,3]),nula([2,3]),nula([3,3]),nula([4,3]),nula([5,3]),nula([6,3]),nula([7,3]),nula([8,3])]     
-        [peao("branca",1,[1,2]),peao("branca",2,[2,2]),peao("branca",3,[3,2]),peao("branca",4,[4,2]),peao("branca",5,[5,2]),peao("branca",6,[6,2]),peao("branca",7,[7,2]),peao("branca",8,[8,2])],
-        [torre("branca",1,[1,1]),cavalo("branca",1,[2,1]),bispo("branca",1,[3,1]),rei("branca",[4,1]),rainha("branca",[5,1]),bispo("branca",2,[6,1]), cavalo("branca",2,[7,1]),torre("branca",2,[8,1])],
-    ]
-
-
+tabuleiro = [[t3,c3,b3,k2,q2,b4,c4,t4],
+            [p9,p10,p10,p11,p12,p13,p14,p15,p16],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [p1,p2,p3,p4,p5,p6,p7,p8],
+            [t1,c1,b1,k1,q1,b2,c2,t2]
+            ]
 
 
 while gameLoop:
