@@ -1,20 +1,11 @@
-import 
 class Pecas:
-    def __init__(self):
-    
-    def rainha(self,cor,local):
-        
-    def torre(self,cor,numero,local):
+    def __init__(self, tipo, cor, local, first = False):
+        self.tipo = tipo
+        self.cor = cor
+        self.local = local
+        if tipo == "peao":
+            self.first = not first
 
-    def bispo(self,cor,numero,local):
 
-    def cavalo(self,cor,numero,local):
-    
-    def rei(self,cor,local):
-    
-    def peao(self,cor,numero,local):
-    
-    def nula(self,local):
-    
     
 
