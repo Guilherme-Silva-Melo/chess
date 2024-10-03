@@ -1,0 +1,11 @@
+# Ignorar diretórios de cache do Python
+__pycache__/
+*.py[cod]
+
+# Ignorar arquivos de logs e temporários
+*.log
+*.tmp
+
+# Ignorar arquivos do VSCode
+.vscode/
+*.code-workspace
